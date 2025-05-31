@@ -16,7 +16,7 @@ int main() {
     // Si se quisiera evitar el subrayado, se podría haber utilizado simplemente "Hola" sin los códigos ANSI.
     builderWords.add("Mundo");
 
-    std::vector<std::vector<int>> listas = {
+    std::vector<std::vector<int>> lists = {
         {1, 2},
         {3, 4}
     };
@@ -27,8 +27,8 @@ int main() {
     // Lo mismo ocurre con el objeto builderWords y la variable palabras de assembler.
     // Finalmente se setea la variable listas de assembler con el vector de vectores listas.
     assembler.setDoubles(builderDoubles.buildJsonArray());
-    assembler.setPalabras(builderWords.buildJsonArray());
-    assembler.setListas(listas);
+    assembler.setWords(builderWords.buildJsonArray());
+    assembler.setIntegerLists(lists);
 
     assembler.printJson();
 

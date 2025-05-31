@@ -46,15 +46,15 @@ class JsonDataBuilder {
 class JsonAssembler {
     private:
         std::string vecDoubles;
-        std::string palabras;
-        std::string listas;
+        std::string words;
+        std::string lists;
 
     public:
         void setDoubles(const std::string& json);
 
-        void setPalabras(const std::string& json);
+        void setWords(const std::string& json);
 
-        void setListas(const std::vector<std::vector<int>>& matrix);
+        void setIntegerLists(const std::vector<std::vector<int>>& matrix);
 
         void printJson() const;
 };

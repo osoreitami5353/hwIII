@@ -3,9 +3,9 @@
 
 void JsonAssembler::setDoubles(const std::string& json) { vecDoubles = json; }
 
-void JsonAssembler::setPalabras(const std::string& json) { palabras = json; }
+void JsonAssembler::setWords(const std::string& json) { words = json; }
 
-void JsonAssembler::setListas(const std::vector<std::vector<int>>& matrix) {
+void JsonAssembler::setIntegerLists(const std::vector<std::vector<int>>& matrix) {
      // std::ostringstream sirve para construir un string a partir de datos, usando el operador << como si fuera std::cout. Permite armar el texto en memoria en vez de imprimirlo.
     std::ostringstream oss;
     oss << "[\n";
@@ -24,13 +24,13 @@ void JsonAssembler::setListas(const std::vector<std::vector<int>>& matrix) {
     }
     oss << "             ]";
     // Se pasa el string armado a la variable listas.
-    listas = oss.str();
+    lists = oss.str();
 }
 
 void JsonAssembler::printJson() const {
     std::cout << "{\n"
             << "  \"vec_doubles\" : " << vecDoubles << ",\n"
-            << "  \"palabras\" : " << palabras << ",\n"
-            << "  \"listas\" : " << listas << "\n"
+            << "  \"palabras\" : " << words << ",\n"
+            << "  \"listas\" : " << lists << "\n"
             << "}" << std::endl;
 }
